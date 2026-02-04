@@ -4,12 +4,13 @@
   requirement: |
     При вводе валидных никнейма, логина и пароля пользователь должен быть зарегистрирован на платформе
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign Up
+    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Nickname - Ann
     Email - annadoctor@inbox.ru
     Password - Trololo5!
   steps:
+    - Нажимаем на кнопку Sign Up
     - Вводим nickname
     - Вводим email
     - Вводим password
@@ -24,12 +25,13 @@
   requirement: |
     При нажатии на кнопку Sign up with Discord пользователь должен быть зарегистрирован в Codebattle с помощью учетной записи в Discord
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign Up
+    Открыта страница https://codebattle.hexlet.io/
     Имеется учетная запись в Discord
   test-data: |
     Email - annadoctor5@inbox.ru
     Password - Trololalao5!
   steps:
+    - Нажимаем на кнопку Sign Up
     - Нажимаем на кнопку Sign Up with Discord
     - Переходим на страницу авторизации в Discord
     - Вводим email
@@ -46,17 +48,18 @@
   requirement: |
     При вводе валидных никнейма, логина и пароля пользователь должен быть зарегистрирован на платформе
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign Up
+    Открыта страница https://codebattle.hexlet.io/
     Имеется учетная запись в GitHub
   test-data: |
     Email - annadoctor55@inbox.ru
     Password - Trolololina123!
   steps:
+    - Нажимаем на кнопку Sign Up
     - Нажимаем на кнопку Sign Up with GitHub
     - Переходим на страницу авторизации в GitHub
     - Вводим email
     - Вводим password
-    - Нажимаем Sign In
+    - Нажимаем Sign Up
   expected-result: |
     Пользователь должен попасть на главную страницу
     Справа в верхнем углу на странице отображается имя пользователя и иконка его аватара в GitHub
@@ -66,11 +69,12 @@
   requirement: |
     При верном вводе email и пароля пользователь должен войти в CodeBattle
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign In
+    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Email - annadoctor@inbox.ru
     Password - Trololo5!
   steps:
+    - Нажимаем на кнопку Sign In
     - Вводим email
     - Вводим пароль
     - Нажимаем кнопку Submit
@@ -83,11 +87,12 @@
   requirement: |
     При нажатии на кнопку Sign In with Discord пользователь должен войти в CodeBattle
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign In
+    В браузере открыта страница https://codebattle.hexlet.io/
     Имеется учетная запись в Discord
   test-data: |
     Empty
   steps:
+    - Нажимаем на кнопку Sign In
     - Нажимаем на кнопку Sign In with Discord
     - Переходим на страницу discord.com 
     - Открывается окно с информацией об авторизации в Codebattle через Discord
@@ -101,10 +106,11 @@
   requirement: |
     При авторизации через GitHub пользователь должен войти в CodeBattle
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/ и вкладка Sign In
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Empty
   steps:
+    - Нажимаем на кнопку Sign In
     - Нажимаем Sign In with GitHub
   expected-result: |
     Пользователь должен попасть на главную страницу Codebattle
@@ -115,7 +121,7 @@
   requirement: |
     При нажатии на кнопку "Создать битву" пользователь должен успешно создать необходимое ему соревнование
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Уровень - 1 звезда
     Тип игры - с ботом
@@ -134,7 +140,7 @@
   requirement: |
     При нажатии на кнопку "Присоединиться к битве" пользователь выбрать любого оппонента по уровню сложности и присоединиться к участию в поединке
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Empty
   steps:
@@ -149,7 +155,7 @@
   requirement: |
     При нажатии на кнопку "Создать турнир" соревнование должно быть успешно созданно
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Основная информация:
     Имя - Ann
@@ -179,7 +185,7 @@
   requirement: |
     При нажатии на кнопку "Создать битву" пользователь может выбрать игру с другом и успешно создать приглашение на битву
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Уровень - 1 звезда
     Тип игры - с другом
@@ -214,7 +220,7 @@
   requirement: |
     Пользователи Codebattle могут общаться друг с другом в чате на главной странице
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    В браузере открыта страница https://codebattle.hexlet.io/
   test-data: |
     Empty
   steps:
@@ -319,3 +325,41 @@
     - Нажимаем на кнопку "Создать турнир"
   expected-result: |
     Все разделы и вкладки сайта Codebattle должны отображаться корректно
+
+- summary: |
+    Проверка возможности пользователя, участвующего в битве, одновременно видеть свой код и код соперника
+  requirement: |
+    Пользователь должен во время битвы одновременно видеть код свой и соперника
+  prerequisites: |
+    В браузере открыта страница https://codebattle.hexlet.io/
+  test-data: |
+    Уровень - 1 звезда
+    Тип игры - с ботом
+    Контроль времени - 8 минут
+    Задание - случайная задача
+    Теги - математика
+  steps:
+    - Нажимаем на кнопку "Создать битву"
+    - Вводим тестовые данные
+    - Нажимаем кнопку «Создать битву»
+  expected-result: |
+    Пользователь должен попасть на страницу игры
+    Экран визуально разделен на 2 половины
+    Слева отображается кодинг пользователя
+    Справа отображается кодинг бота
+    Весь кодинг показан в режиме реального времени
+
+- summary: |
+    Проверка возможности пользователя участвовать в пробной игре без регистрации
+  requirement: |
+    Незарегистрированный пользователь может участвовать в пробной игре
+  prerequisites: |
+    В браузере открыта страница https://codebattle.hexlet.io/
+  test-data: |
+    Empty
+  steps:
+    - Нажимаем на кнопку "Попробовать простой бой"
+  expected-result: |
+    Пользователь должен попасть на страницу битвы
+
+
